@@ -1,0 +1,20 @@
+size: 10   file difference: similar
+
+user times:
+comparing time: 0.000000 
+saving time: 0.000000 
+deleting time: 0.000000 
+s and d time: 0.000000
+
+system times:
+comparing time: 0.000000 
+saving time: 0.000000 
+deleting time: 0.000000 
+s and d time: 0.000000
+
+real times:
+comparing time: 0.010000 
+saving time: 0.000000 
+deleting time: 0.000000 
+s and d time: 0.000000
+

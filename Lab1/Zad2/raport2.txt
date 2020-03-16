@@ -1,0 +1,180 @@
+size: 10   file difference: similar
+
+user times:
+comparing time: 0.000000 
+saving time: 0.000000 
+deleting time: 0.000000 
+s and d time: 0.000000
+
+system times:
+comparing time: 0.000000 
+saving time: 0.000000 
+deleting time: 0.000000 
+s and d time: 0.000000
+
+real times:
+comparing time: 0.010000 
+saving time: 0.000000 
+deleting time: 0.000000 
+s and d time: 0.000000
+
+size: 50   file difference: similar
+
+user times:
+comparing time: 0.000000 
+saving time: 0.000000 
+deleting time: 0.000000 
+s and d time: 0.000000
+
+system times:
+comparing time: 0.000000 
+saving time: 0.000000 
+deleting time: 0.000000 
+s and d time: 0.000000
+
+real times:
+comparing time: 0.060000 
+saving time: 0.000000 
+deleting time: 0.000000 
+s and d time: 0.000000
+
+size: 150   file difference: similar
+
+user times:
+comparing time: 0.000000 
+saving time: 0.000000 
+deleting time: 0.000000 
+s and d time: 0.000000
+
+system times:
+comparing time: 0.020000 
+saving time: 0.000000 
+deleting time: 0.000000 
+s and d time: 0.000000
+
+real times:
+comparing time: 0.170000 
+saving time: 0.000000 
+deleting time: 0.000000 
+s and d time: 0.000000
+
+size: 10   file difference: semi-different
+
+user times:
+comparing time: 0.000000 
+saving time: 0.000000 
+deleting time: 0.000000 
+s and d time: 0.000000
+
+system times:
+comparing time: 0.000000 
+saving time: 0.000000 
+deleting time: 0.000000 
+s and d time: 0.010000
+
+real times:
+comparing time: 0.020000 
+saving time: 0.000000 
+deleting time: 0.000000 
+s and d time: 0.000000
+
+size: 50   file difference: semi-different
+
+user times:
+comparing time: 0.000000 
+saving time: 0.000000 
+deleting time: 0.000000 
+s and d time: 0.000000
+
+system times:
+comparing time: 0.000000 
+saving time: 0.010000 
+deleting time: 0.000000 
+s and d time: 0.000000
+
+real times:
+comparing time: 0.060000 
+saving time: 0.010000 
+deleting time: 0.010000 
+s and d time: 0.000000
+
+size: 150   file difference: semi-different
+
+user times:
+comparing time: 0.010000 
+saving time: 0.020000 
+deleting time: 0.000000 
+s and d time: 0.000000
+
+system times:
+comparing time: 0.040000 
+saving time: 0.010000 
+deleting time: 0.000000 
+s and d time: 0.000000
+
+real times:
+comparing time: 0.260000 
+saving time: 0.020000 
+deleting time: 0.000000 
+s and d time: 0.000000
+
+size: 10   file difference: different
+
+user times:
+comparing time: 0.000000 
+saving time: 0.010000 
+deleting time: 0.000000 
+s and d time: 0.000000
+
+system times:
+comparing time: 0.010000 
+saving time: 0.000000 
+deleting time: 0.000000 
+s and d time: 0.000000
+
+real times:
+comparing time: 0.030000 
+saving time: 0.010000 
+deleting time: 0.000000 
+s and d time: 0.000000
+
+size: 50   file difference: different
+
+user times:
+comparing time: 0.000000 
+saving time: 0.030000 
+deleting time: 0.000000 
+s and d time: 0.000000
+
+system times:
+comparing time: 0.050000 
+saving time: 0.010000 
+deleting time: 0.000000 
+s and d time: 0.000000
+
+real times:
+comparing time: 0.160000 
+saving time: 0.040000 
+deleting time: 0.000000 
+s and d time: 0.000000
+
+size: 150   file difference: different
+
+user times:
+comparing time: 0.000000 
+saving time: 0.050000 
+deleting time: 0.000000 
+s and d time: 0.000000
+
+system times:
+comparing time: 0.190000 
+saving time: 0.060000 
+deleting time: 0.010000 
+s and d time: 0.000000
+
+real times:
+comparing time: 0.620000 
+saving time: 0.120000 
+deleting time: 0.000000 
+s and d time: 0.000000
+
