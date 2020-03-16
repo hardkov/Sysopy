@@ -1,4 +1,5 @@
 #include "mylib.h"
+#include <string.h>
 
 int main(int argc, char* argv[]){
     
@@ -20,7 +21,7 @@ int main(int argc, char* argv[]){
     int j;
     for(i = 0; i < (argc-1)/2; i++){
         for(j = 0; j < 3; j++){
-            printf(bl_c -> blocks[i] -> operations[j]); 
+            printf("%s", bl_c -> blocks[i] -> operations[j]); 
         }
     }
 }
