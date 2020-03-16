@@ -122,7 +122,10 @@ struct block_container* create_table(int size){
     
     bl_c -> size = size;
     bl_c -> blocks = (struct block**) calloc(size, sizeof(struct block*));
-
+    int i;
+    for(i = 0; i < size; i++){
+        bl_c -> blocks[i] = NULL;
+    }
     return bl_c; 
 }
 
