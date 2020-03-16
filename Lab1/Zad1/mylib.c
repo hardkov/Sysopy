@@ -38,14 +38,14 @@ int create_block(char* file, struct block_container* bl_c){
     char** tmp = NULL;
     struct block* bl = (struct block*) calloc(1, sizeof(struct block));
     int new_block_index = -1; 
-    char* buf = (char*) calloc(1100, sizeof(char));
+    char* buf = (char*) calloc(100100, sizeof(char));
     int size = 0;
 
     FILE* f = fopen(file, "r");
     if(f == NULL){
         exit(EXIT_FAILURE);
     }
-    fread(buf, sizeof(char), 1000, f);
+    fread(buf, sizeof(char), 100000, f);
     fclose(f);
 
     int i = 0;
@@ -60,7 +60,7 @@ int create_block(char* file, struct block_container* bl_c){
     while(buf[buf_counter] != '\0'){
         if(buf_counter == 0 || (buf[buf_counter-1] == '\n' && buf[buf_counter] >= 48 && buf[buf_counter] <= 57)){
             tmp_counter++;
-            tmp[tmp_counter] = (char*) calloc(100, sizeof(char));
+            tmp[tmp_counter] = (char*) calloc(10000, sizeof(char));
             strncat(tmp[tmp_counter], &buf[buf_counter], 1);
         }
         else{
@@ -122,7 +122,10 @@ struct block_container* create_table(int size){
     
     bl_c -> size = size;
     bl_c -> blocks = (struct block**) calloc(size, sizeof(struct block*));
-
+    int i;
+    for(i = 0; i < size; i++){
+        bl_c -> blocks[i] = NULL;
+    }
     return bl_c; 
 }
 
