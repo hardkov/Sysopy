@@ -1,0 +1,198 @@
+function: sort  records: 50000   size: 1
+system function:
+	user time: 4.240000
+	system time: 4.050000
+lib function:
+	user time:3.230000
+	system time:2.240000								lib
+
+function: sort  records: 50000   size: 4
+system function:
+	user time: 1.880000
+	system time: 2.120000
+lib function:
+	user time:2.700000
+	system time:2.630000								sys
+
+function: sort  records: 50000   size: 512
+system function:
+	user time: 2.560000
+	system time: 2.930000
+lib function:
+	user time:3.080000									sys
+	system time:2.990000
+
+function: sort  records: 50000   size: 1024
+system function:
+	user time: 2.640000
+	system time: 3.060000
+lib function:
+	user time:3.090000
+	system time:3.150000								sys
+
+function: sort  records: 50000   size: 4096
+system function:
+	user time: 2.600000
+	system time: 3.500000
+lib function:
+	user time:2.930000
+	system time:3.460000								?
+
+function: sort  records: 50000   size: 8192
+system function:
+	user time: 2.850000
+	system time: 5.210000
+lib function:
+	user time:3.260000
+	system time:5.190000								sys
+
+function: sort  records: 70000   size: 1
+system function:
+	user time: 10.530000
+	system time: 8.810000
+lib function:
+	user time:7.050000
+	system time:4.560000								lib
+
+function: sort  records: 70000   size: 4
+system function:
+	user time: 3.560000
+	system time: 4.050000
+lib function:
+	user time:3.900000
+	system time:3.850000								??
+
+function: sort  records: 70000   size: 512
+system function:
+	user time: 3.840000
+	system time: 4.390000
+lib function:
+	user time:4.600000
+	system time:4.400000								sys
+
+function: sort  records: 70000   size: 1024
+system function:
+	user time: 4.160000
+	system time: 4.390000
+lib function:
+	user time:4.700000
+	system time:4.610000								sys
+
+function: sort  records: 70000   size: 4096
+system function:
+	user time: 3.870000
+	system time: 4.950000
+lib function:
+	user time:4.360000
+	system time:4.820000								sys
+
+function: sort  records: 70000   size: 8192
+system function:
+	user time: 5.050000
+	system time: 8.370000
+lib function:
+	user time:5.500000
+	system time:8.520000								sys
+
+function: copy  records: 10000   size: 1
+system function:
+	user time: 0.000000
+	system time: 0.030000
+lib function:
+	user time:0.000000
+	system time:0.000000								lib
+
+function: copy  records: 10000   size: 4
+system function:
+	user time: 0.010000
+	system time: 0.020000
+lib function:
+	user time:0.000000
+	system time:0.000000								lib
+
+function: copy  records: 10000   size: 512
+system function:
+	user time: 0.010000
+	system time: 0.010000
+lib function:
+	user time:0.000000
+	system time:0.000000								lib
+
+function: copy  records: 10000   size: 1024
+system function:
+	user time: 0.010000
+	system time: 0.030000
+lib function:
+	user time:0.000000
+	system time:0.000000								lib
+
+function: copy  records: 10000   size: 4096
+system function:
+	user time: 0.010000
+	system time: 0.040000
+lib function:
+	user time:0.010000
+	system time:0.030000								lib
+
+function: copy  records: 10000   size: 8192
+system function:
+	user time: 0.020000
+	system time: 0.070000
+lib function:
+	user time:0.020000
+	system time:0.070000								??
+
+function: copy  records: 250000   size: 1
+system function:
+	user time: 0.210000
+	system time: 0.480000
+lib function:
+	user time:0.010000
+	system time:0.000000								lib
+
+function: copy  records: 250000   size: 4
+system function:
+	user time: 0.210000
+	system time: 0.500000
+lib function:
+	user time:0.010000
+	system time:0.000000								lib
+
+function: copy  records: 250000   size: 512
+system function:
+	user time: 0.230000
+	system time: 0.500000
+lib function:
+	user time:0.050000
+	system time:0.110000								lib
+
+function: copy  records: 250000   size: 1024
+system function:
+	user time: 0.180000
+	system time: 0.540000
+lib function:
+	user time:0.080000
+	system time:0.240000								lib
+
+function: copy  records: 250000   size: 4096
+system function:
+	user time: 0.150000
+	system time: 0.790000
+lib function:
+	user time:0.200000
+	system time:0.870000								sys
+
+function: copy  records: 250000   size: 8192
+system function:
+	user time: 0.230000
+	system time: 1.640000
+lib function:
+	user time:0.430000
+	system time:1.980000								sys
+
+////////////////////////////////////////////////////////////
+
+Wnioski: 
+	Oglolna tendencja jest tak za dla blokow o malych rozmiarach funkcje biblioteczne sa bardziej wydajne.
+	Wraz ze wzrostem rozmiaru bloku przewage zyskuja funkcje systemowe. Widac to wyraznie przy funkcji sort.
+	Jesli chodzi o funkcje copy to funkcje systemowe dopiero przy najwieszych blokach sa wydajniejsze.
