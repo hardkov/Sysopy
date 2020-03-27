@@ -296,6 +296,10 @@ void create_list_file(int number_of_matricies){
 }
 
 int main(int argc, char* argv[]){
+    if(argc != 4){
+        printf("usage: ./test min_size max_size number_of_matricies");
+        return 0;
+    }
 
     srand(time(NULL));
 

@@ -295,6 +295,11 @@ struct matrix** create_com_file(char* list, int* number_of_matricies){
 }
 
 int main(int argc, char* argv[]){
+    if(argc != 5){
+        printf("usage: ./macierz list.txt number_of_workers timeout mode");
+        return 0;
+    }
+    
     char* list = (char*) calloc(strlen(argv[1]), sizeof(char));
     char* mode = (char*) calloc(strlen(argv[4]), sizeof(char));
     char* buf = (char*) calloc(BUF_SIZE, sizeof(char));
@@ -331,7 +336,7 @@ int main(int argc, char* argv[]){
 
     if(strcmp("split", mode) == 0){
         for(i = 0; i < number_of_matricies; i++){
-            sprintf(buf, "paste split_%d* -d',' >> out%d.txt", i, i);
+            sprintf(buf, "paste split_%d* -d',' > out%d.txt", i, i);
             system(buf);
         }
     }
