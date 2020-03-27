@@ -310,7 +310,7 @@ struct matrix** create_com_file(char* list, int* number_of_matricies){
 }
 
 int main(int argc, char* argv[]){
-    if(argv != 6){
+    if(argc != 6){
         printf("usage: ./macierz list.txt number_of_workers mode cpu_limit mem_limit(MB)");
         return 0;
     }

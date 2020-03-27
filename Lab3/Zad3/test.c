@@ -296,7 +296,7 @@ void create_list_file(int number_of_matricies){
 }
 
 int main(int argc, char* argv[]){
-    if(argv != 6){
+    if(argc != 6){
         printf("usage: ./test min_size max_size number_of_matricies cpu_limit mem_limit");
         return 0;
     }
