@@ -1,18 +1,13 @@
 #define BUF_SIZE 2000
 #define ELEM_SIZE 15
-#include <sys/types.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdio.h>
 #include <string.h>
 #include <sys/wait.h>
-#include <time.h>
 #include <sys/file.h>
-#include <sys/time.h>
 #include <sys/resource.h>
-#include <inttypes.h>
-#include <fcntl.h>
-#include <sys/stat.h>
+
 
 struct matrix{
     int rows;

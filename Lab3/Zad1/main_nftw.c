@@ -1,15 +1,8 @@
 #define _XOPEN_SOURCE 500
 #include <ftw.h>
-#include <dirent.h>
-#include <stdio.h>
 #include <stdlib.h>
-#include <sys/types.h>
-#include <sys/stat.h>
 #include <unistd.h>
-#include <time.h>
-#include <string.h>
-#include <math.h>
-#include <sys/types.h>
+#include <stdio.h>
 #include <sys/wait.h>
 
 static int fn(const char *fpath, const struct stat *sb, int typeflag, struct FTW *ftwbuf){
