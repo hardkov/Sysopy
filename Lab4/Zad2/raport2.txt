@@ -1,0 +1,6 @@
+Eksperymenty zostay przeprowadzone dla sygnalow 10 oraz 20. Wnioski sa takie same:
+- Ignorowanie sygnalu zachodzi zarowno w procesie potomnym jak i w wykonaniu funkcji exec,
+- Obsluga sygmalu przechodzi z procesu macierzystego na potomny,
+- Maskowanie jest dziedziczone zarowno przez proces potomny jak i funckje exec,
+- Oczekujace sygnaly sa czyszczone w procesie potomnym, natomiast przechodza do funkcji exec.
+Rezultaty sa zgodne z teoria z wykladow.
