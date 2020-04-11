@@ -1,0 +1,3 @@
+ps -aux | grep root | wc -l
+ls . | grep test | grep txt
+ls . | grep main
