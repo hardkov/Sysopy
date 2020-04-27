@@ -41,29 +41,22 @@ int main(int argc, char* argv[]){
     
     // opening semaphores and attatching shared mem
     sm_id = shmget(sm_key, 0, 0);
-    if(sm_id == -1){
-        perror("shmget");
-    }
+    if(sm_id == -1) perror("shmget");
 
     sem_id = semget(sem_key, 0, 0);
-    if(sem_id == -1){
-        perror("semget");
-    }
+    if(sem_id == -1) perror("semget");
 
 
     sm_addr = (int*) shmat(sm_id, NULL, 0);
-    if(sm_addr == (int*) -1){
-        perror("shmat");        // addr sm_addr -> array size 200, sm_addr+SM_ARR_SIZE -> int to_prepare, sm_addr_SM_ARR_SIZE+1 -> int to_send
-    }                           // sm_addr + SM_ARR_SIZE + 2 -> int first_free_idx int first_to_prepare, int first_to_send
-
+    if(sm_addr == (int*) -1) perror("shmat");
+                               // addr sm_addr -> array size 200, sm_addr+SM_ARR_SIZE -> int to_prepare, sm_addr_SM_ARR_SIZE+1 -> int to_send
+                               // sm_addr + SM_ARR_SIZE + 2 -> int first_free_idx int first_to_prepare, int first_to_send
     // real work
     while(WORK){
         sb[0].sem_flg = 0;
         sb[0].sem_num = 0;    // blocking access if sem was 1, or waiting for access if sem was 1
         sb[0].sem_op = -1;
-        if(semop(sem_id, sb, 1) == -1){
-            perror("semop start");
-        }
+        if(semop(sem_id, sb, 1) == -1) perror("semop start");
 
         // accessing shared memory
         to_prepare = sm_addr + SM_ARR_SIZE;
@@ -89,14 +82,13 @@ int main(int argc, char* argv[]){
         sb[0].sem_flg = 0;
         sb[0].sem_num = 0;   
         sb[0].sem_op = 1; // unblocking
-        if(semop(sem_id, sb, 1) == -1){
-            perror("semop start");
-        }
+        if(semop(sem_id, sb, 1) == -1) perror("semop start");
 
         sleep(1);
     }
 
     shmdt(sm_addr);
+    free(sb);
 
     return 0;
 }

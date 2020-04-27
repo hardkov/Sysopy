@@ -47,14 +47,10 @@ int main(int argc, char* argv[]){
     sm_key = ftok("./main.c", 1);
 
     sm_id = shmget(sm_key, SM_SIZE, IPC_CREAT | 00700);
-    if(sm_id == -1){
-        perror("sm_id");
-    }
+    if(sm_id == -1) perror("sm_id");
 
     sem_id = semget(sem_key, 1, IPC_CREAT | 00700);
-    if(sem_id == -1){
-        perror("semget");
-    }
+    if(sem_id == -1)perror("semget");
     arg.val = 1;
     semctl(sem_id, 0, SETVAL, arg);
 
@@ -66,15 +62,9 @@ int main(int argc, char* argv[]){
     *first_to_send = -1;
 
     while(WORK){
-        if(prep-- > 0 && fork() == 0){
-            execl("./worker1", "worker1", NULL);
-        }
-        else if(pack-- > 0 && fork() == 0){
-            execl("./worker2", "worker2", NULL);
-        }
-        else if(send-- > 0 && fork() == 0){
-            execl("./worker3", "worker3", NULL);
-        }
+        if(prep-- > 0 && fork() == 0) execl("./worker1", "worker1", NULL);
+        else if(pack-- > 0 && fork() == 0) execl("./worker2", "worker2", NULL);
+        else if(send-- > 0 && fork() == 0) execl("./worker3", "worker3", NULL);
         sleep(1);
     }
 

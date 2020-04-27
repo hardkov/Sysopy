@@ -34,7 +34,6 @@ int main(int argc, char* argv[]){
     int* to_send;
     int* first_free_idx;
     int* first_to_prepare;
-    int* first_to_send;
 
 
     WORK = true;
@@ -83,7 +82,7 @@ int main(int argc, char* argv[]){
         sleep(1);
     }
 
-    if(munmap(sm_addr, SM_SIZE) == -1) perror("munmap");
+    if(munmap((void*) sm_addr, SM_SIZE) == -1) perror("munmap");
     if(close(sm_fd) == -1) perror("close");
     if(sem_close(sem_addr) == -1) perror("sem_close");
 

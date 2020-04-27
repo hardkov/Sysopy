@@ -78,7 +78,7 @@ int main(int argc, char* argv[]){
         sleep(1);
     }
 
-    if(munmap(sm_addr, SM_SIZE) == -1) perror("munmap");
+    if(munmap((void*) sm_addr, SM_SIZE) == -1) perror("munmap");
     if(close(sm_fd) == -1) perror("close");
     if(sem_close(sem_addr) == -1) perror("sem_close");
 
