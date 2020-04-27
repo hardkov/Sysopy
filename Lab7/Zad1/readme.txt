@@ -1,0 +1,1 @@
+add situation when there is nothing to be prepared/send
