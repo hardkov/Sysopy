@@ -1,7 +1,4 @@
-#define _POSIX_C_SOURCE 200809L
-#define MAX_ORDER_SIZE 100
-#define SM_SIZE 1000
-#define SM_ARR_SIZE 5
+#include "my_conf.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>

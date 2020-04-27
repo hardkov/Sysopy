@@ -1,7 +1,4 @@
-#define _POSIX_C_SOURCE 200809L
-#define MAX_ORDER_SIZE 100
-#define SM_SIZE 1000
-#define SM_ARR_SIZE 5
+#include "my_conf.h"
 #include <sys/sem.h>
 #include <sys/ipc.h>
 #include <sys/types.h>
@@ -26,14 +23,22 @@ void sigint_handler(int signo){
 }
 
 int main(int argc, char* argv[]){
-    key_t sm_key;
-    key_t sem_key;
-    int sm_id;
-    int sem_id;
+    key_t sm_key, sem_key;
+    int sm_id, sem_id;
+    int prep, send, pack;
     int* sm_addr;
     int* first_to_prepare;
     int* first_to_send;
     union semun arg;
+
+    if(argc != 4){
+        printf("Usage: %s prep_workers pack_workers send_workers\n", argv[0]);
+        exit(EXIT_FAILURE);
+    }
+
+    prep = atoi(argv[1]);
+    pack = atoi(argv[2]);
+    send = atoi(argv[3]);
 
     WORK = true;
     signal(SIGINT, sigint_handler);
@@ -60,7 +65,18 @@ int main(int argc, char* argv[]){
     *first_to_prepare = -1;
     *first_to_send = -1;
 
-    while(WORK){ sleep(1); }
+    while(WORK){
+        if(prep-- > 0 && fork() == 0){
+            execl("./worker1", "worker1", NULL);
+        }
+        else if(pack-- > 0 && fork() == 0){
+            execl("./worker2", "worker2", NULL);
+        }
+        else if(send-- > 0 && fork() == 0){
+            execl("./worker3", "worker3", NULL);
+        }
+        sleep(1);
+    }
 
     shmdt(sm_addr);
     shmctl(sm_id, IPC_RMID, NULL);
