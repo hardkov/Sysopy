@@ -1,6 +1,6 @@
 CC=gcc -Wall
 
-all: c s t
+all: s c t
 
 c:
 	$(CC) -o client client.c utils.c -lpthread
@@ -8,7 +8,7 @@ c:
 s:
 	$(CC) -o server server.c utils.c -lpthread
 
-t:
+t: client server
 	./server 9898 sock
 
 clean:
