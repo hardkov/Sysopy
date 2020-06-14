@@ -67,12 +67,12 @@ void send_message_to(int sock_fd, MSG_TYPE type, char* content, struct sockaddr*
 }
 
 player* create_player(int fd, struct sockaddr* addr, char* name) {
-    player* cl = (player*) malloc(sizeof(player));
-    cl->addr = addr;
-    cl->fd = fd;
-    cl->alive = 1;
-    strcpy(cl->name, name);
-    return cl;
+    player* pl = (player*) malloc(sizeof(player));
+    pl->addr = addr;
+    pl->fd = fd;
+    pl->alive = 1;
+    strcpy(pl->name, name);
+    return pl;
 }
 
 game* create_new_game(int player1_idx, int player2_idx) {

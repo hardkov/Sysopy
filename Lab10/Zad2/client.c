@@ -40,7 +40,7 @@ void open_connection() {
         player_sock.sin_port = 0;
         player_sock.sin_addr.s_addr = inet_addr(server_address);
 
-        if(bind(server_sock_fd, (struct sockaddr*) &player_sock, sizeof(player_sock)) < 0) perror("bind");
+        //if(bind(server_sock_fd, (struct sockaddr*) &player_sock, sizeof(player_sock)) < 0) perror("bind");
 
         if(connect(server_sock_fd, (struct sockaddr*) server_sock, sizeof(struct sockaddr_in)) < 0) perror("connect");
     }

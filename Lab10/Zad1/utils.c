@@ -41,11 +41,11 @@ void send_message(int sock_fd, MSG_TYPE type, char* content) {
 }
 
 player* create_player(int fd, char* name) {
-    player* cl = (player*) malloc(sizeof(player));
-    cl->fd = fd;
-    cl->alive = 1;
-    strcpy(cl->name, name);
-    return cl;
+    player* pl = (player*) malloc(sizeof(player));
+    pl->fd = fd;
+    pl->alive = 1;
+    strcpy(pl->name, name);
+    return pl;
 }
 
 game* create_new_game(int player1_idx, int player2_idx) {
