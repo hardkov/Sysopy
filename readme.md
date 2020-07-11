@@ -7,15 +7,15 @@ Comparing library functions and system calls. Writing equvalent of find programm
 - **Lab3** Processes  
 Parallel matrix multiplication. Using resource constraints on every single process.
 - **Lab4** Signals  
-- **Lab5** Pipes
+- **Lab5** Pipes  
 Command interpreter, Producer-consumer problem.
-- **Lab6** IPC - Message queues
+- **Lab6** IPC - Message queues  
 Simple client-server chat using System V IPC and POSIX IPC.
-- **Lab7** IPC - Shared memory, semaphores
+- **Lab7** IPC - Shared memory, semaphores  
  Simulation of shipping service using System V IPC and POSIX IPC.
-- **Lab8** Threads
+- **Lab8** Threads  
 Constructing histogram from an image.
-- **Lab9** Thread synchronization
+- **Lab9** Thread synchronization  
 Sleeping barber problem
-- **Lab10** Sockets
+- **Lab10** Sockets  
 Client-server tic tac toe using sockets.
